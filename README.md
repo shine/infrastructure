@@ -2,15 +2,23 @@
 
 # To start
 
-    ruby spawn.rb
+    $ ruby spawn.rb
 
 # To stop
 
-    ruby stop.rb
+    $ ruby stop.rb
 
+# To run tests
 
+    $ cucumber
 
+# Prereqs for start.rb and stop.rb
 
+    rspec >= 3.4.0
+    cucumber >= 2.3.2
+    aws-sdk >= 2.2.26
+    aws-sdk-v1 >= 1.66.0
+    dotenv >= 2.1.0
 
 # Some guiding principles
 
