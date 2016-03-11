@@ -20,3 +20,13 @@ Then(/^A cloud instance tagged samwecom should appear$/) do
    end
    expect( ec2.instances.filter("tag:role", "samwecom").select { |i| i.status == :running }.count ).to eq(1)
 end
+
+Then(/^http:\/\/www\.sam\-we\.com should respond with OK$/) do
+  require 'open-uri'
+  expect( URI('http://www.sam-we.com/').read ).to match(/$OK^/)
+end
+
+Then(/^http:\/\/mercury\.sam\-we\.com should respond with OK$/) do
+  require 'open-uri'
+  expect( URI('http://mercury.sam-we.com/').read ).to match(/$OK^/)
+end
